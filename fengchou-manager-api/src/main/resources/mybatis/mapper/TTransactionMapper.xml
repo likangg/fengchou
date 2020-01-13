@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whfc.fengchou.mapper.TTransactionMapper">
+  <resultMap id="BaseResultMap" type="com.whfc.fengchou.bean.TTransaction">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="ordersn" jdbcType="VARCHAR" property="ordersn" />
+    <result column="paysn" jdbcType="VARCHAR" property="paysn" />
+    <result column="memberid" jdbcType="INTEGER" property="memberid" />
+    <result column="amount" jdbcType="REAL" property="amount" />
+    <result column="paystate" jdbcType="TINYINT" property="paystate" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="completiontime" jdbcType="VARCHAR" property="completiontime" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="createat" jdbcType="VARCHAR" property="createat" />
+    <result column="updateat" jdbcType="VARCHAR" property="updateat" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, ordersn, paysn, memberid, amount, paystate, source, status, completiontime, note, 
+    createat, updateat
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_transaction
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_transaction
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.whfc.fengchou.bean.TTransaction">
+    insert into t_transaction (id, ordersn, paysn, 
+      memberid, amount, paystate, 
+      source, status, completiontime, 
+      note, createat, updateat
+      )
+    values (#{id,jdbcType=INTEGER}, #{ordersn,jdbcType=VARCHAR}, #{paysn,jdbcType=VARCHAR}, 
+      #{memberid,jdbcType=INTEGER}, #{amount,jdbcType=REAL}, #{paystate,jdbcType=TINYINT}, 
+      #{source,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{completiontime,jdbcType=VARCHAR}, 
+      #{note,jdbcType=VARCHAR}, #{createat,jdbcType=VARCHAR}, #{updateat,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.whfc.fengchou.bean.TTransaction">
+    insert into t_transaction
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="ordersn != null">
+        ordersn,
+      </if>
+      <if test="paysn != null">
+        paysn,
+      </if>
+      <if test="memberid != null">
+        memberid,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="paystate != null">
+        paystate,
+      </if>
+      <if test="source != null">
+        source,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="completiontime != null">
+        completiontime,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+      <if test="createat != null">
+        createat,
+      </if>
+      <if test="updateat != null">
+        updateat,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="ordersn != null">
+        #{ordersn,jdbcType=VARCHAR},
+      </if>
+      <if test="paysn != null">
+        #{paysn,jdbcType=VARCHAR},
+      </if>
+      <if test="memberid != null">
+        #{memberid,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=REAL},
+      </if>
+      <if test="paystate != null">
+        #{paystate,jdbcType=TINYINT},
+      </if>
+      <if test="source != null">
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="completiontime != null">
+        #{completiontime,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="createat != null">
+        #{createat,jdbcType=VARCHAR},
+      </if>
+      <if test="updateat != null">
+        #{updateat,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.whfc.fengchou.bean.TTransaction">
+    update t_transaction
+    <set>
+      <if test="ordersn != null">
+        ordersn = #{ordersn,jdbcType=VARCHAR},
+      </if>
+      <if test="paysn != null">
+        paysn = #{paysn,jdbcType=VARCHAR},
+      </if>
+      <if test="memberid != null">
+        memberid = #{memberid,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=REAL},
+      </if>
+      <if test="paystate != null">
+        paystate = #{paystate,jdbcType=TINYINT},
+      </if>
+      <if test="source != null">
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="completiontime != null">
+        completiontime = #{completiontime,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="createat != null">
+        createat = #{createat,jdbcType=VARCHAR},
+      </if>
+      <if test="updateat != null">
+        updateat = #{updateat,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.whfc.fengchou.bean.TTransaction">
+    update t_transaction
+    set ordersn = #{ordersn,jdbcType=VARCHAR},
+      paysn = #{paysn,jdbcType=VARCHAR},
+      memberid = #{memberid,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=REAL},
+      paystate = #{paystate,jdbcType=TINYINT},
+      source = #{source,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      completiontime = #{completiontime,jdbcType=VARCHAR},
+      note = #{note,jdbcType=VARCHAR},
+      createat = #{createat,jdbcType=VARCHAR},
+      updateat = #{updateat,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

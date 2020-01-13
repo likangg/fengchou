@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/fengchou-main" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/fengchou-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/fengchou-main/pom.xml" />
+        <option value="$PROJECT_DIR$/fengchou-common/pom.xml" />
+        <option value="$PROJECT_DIR$/fengchou-bean/pom.xml" />
+        <option value="$PROJECT_DIR$/fengchou-manager-api/pom.xml" />
+        <option value="$PROJECT_DIR$/fengchou-manager-impl/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

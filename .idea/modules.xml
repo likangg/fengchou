@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fengchou-bean/fengchou-bean.iml" filepath="$PROJECT_DIR$/fengchou-bean/fengchou-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengchou-common/fengchou-common.iml" filepath="$PROJECT_DIR$/fengchou-common/fengchou-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengchou-main/fengchou-main.iml" filepath="$PROJECT_DIR$/fengchou-main/fengchou-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengchou-manager-api/fengchou-manager-api.iml" filepath="$PROJECT_DIR$/fengchou-manager-api/fengchou-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengchou-manager-impl/fengchou-manager-impl.iml" filepath="$PROJECT_DIR$/fengchou-manager-impl/fengchou-manager-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengchou-parent/fengchou-parent.iml" filepath="$PROJECT_DIR$/fengchou-parent/fengchou-parent.iml" />
+    </modules>
+  </component>
+</project>

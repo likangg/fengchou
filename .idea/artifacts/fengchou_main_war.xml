@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fengchou-main:war">
+    <output-path>$PROJECT_DIR$/fengchou-main/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>fengchou-main</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="fengchou-main-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="fengchou-main:war exploded" />
+    </root>
+  </artifact>
+</component>
